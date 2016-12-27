@@ -26,21 +26,140 @@ public class JFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jToolBar1 = new javax.swing.JToolBar();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        panelMerah = new javax.swing.JPanel();
+        panelBiru = new javax.swing.JPanel();
+        panelKuning = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jToolBar1.setBackground(new java.awt.Color(255, 255, 255));
+        jToolBar1.setRollover(true);
+
+        jButton1.setText("Merah");
+        jButton1.setFocusable(false);
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(jButton1);
+
+        jButton2.setText("Biru");
+        jButton2.setFocusable(false);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(jButton2);
+
+        jButton3.setText("Kuning");
+        jButton3.setFocusable(false);
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(jButton3);
+
+        jPanel1.setLayout(new java.awt.CardLayout());
+
+        panelMerah.setBackground(new java.awt.Color(255, 0, 51));
+
+        javax.swing.GroupLayout panelMerahLayout = new javax.swing.GroupLayout(panelMerah);
+        panelMerah.setLayout(panelMerahLayout);
+        panelMerahLayout.setHorizontalGroup(
+            panelMerahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        panelMerahLayout.setVerticalGroup(
+            panelMerahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 263, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(panelMerah, "card2");
+
+        panelBiru.setBackground(new java.awt.Color(0, 51, 255));
+
+        javax.swing.GroupLayout panelBiruLayout = new javax.swing.GroupLayout(panelBiru);
+        panelBiru.setLayout(panelBiruLayout);
+        panelBiruLayout.setHorizontalGroup(
+            panelBiruLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        panelBiruLayout.setVerticalGroup(
+            panelBiruLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 263, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(panelBiru, "card3");
+
+        panelKuning.setBackground(new java.awt.Color(255, 255, 0));
+
+        javax.swing.GroupLayout panelKuningLayout = new javax.swing.GroupLayout(panelKuning);
+        panelKuning.setLayout(panelKuningLayout);
+        panelKuningLayout.setHorizontalGroup(
+            panelKuningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        panelKuningLayout.setVerticalGroup(
+            panelKuningLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 263, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(panelKuning, "card4");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        panelMerah.setVisible(true);
+        panelBiru.setVisible(false);
+        panelKuning.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        panelBiru.setVisible(true);
+        panelMerah.setVisible(false);
+        panelKuning.setVisible(false);
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        panelKuning.setVisible(true);
+        panelMerah.setVisible(false);
+        panelBiru.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +197,13 @@ public class JFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JPanel panelBiru;
+    private javax.swing.JPanel panelKuning;
+    private javax.swing.JPanel panelMerah;
     // End of variables declaration//GEN-END:variables
 }
